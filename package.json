@@ -42,10 +42,7 @@
       "buildResources": "assets"
     },
     "appId": "com.link_intersystems.electron.react.example",
-    "productName": "Electron React App",
-    "win": {
-      "publish": []
-    }
+    "productName": "Electron React App"
   },
   "eslintConfig": {
     "extends": [
