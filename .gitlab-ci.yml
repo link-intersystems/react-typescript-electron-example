@@ -21,7 +21,7 @@ stages:
 cache:
   paths:
     - node_modules/
-    - .yarn
+    - .yarn/
 
 test:electron:
   stage: test
