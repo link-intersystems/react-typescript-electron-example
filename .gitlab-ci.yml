@@ -46,6 +46,7 @@ dist:electron:
     - yarn install --frozen-lockfile
   script:
     - npm run electron:build
+    - ls -al dist
   artifacts:
     paths:
       - "dist/${SETUP_WIN_BINARY}"
