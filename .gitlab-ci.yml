@@ -28,14 +28,12 @@ test:electron:
     - npm install
     - npm install yarn
     - npm run test
-    - npm run electron:build
 
 dist:electron:
   stage: dist
   script:
     - npm install
     - npm install yarn
-    - npm run test
     - npm run electron:build
 #    - node ./specs/start.js ./specs/async.spec.js
 
