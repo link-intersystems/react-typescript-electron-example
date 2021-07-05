@@ -57,13 +57,13 @@ const App = () => {
         </div>
         <div className="row border-left border-right">
           <div className="col-4 p-1">
-            <ProgressBar model={model} />
+            <ProgressBar model={model} id="progressBar" />
           </div>
           <div className="col-4 p-1" >
-            <ProgressCircle model={model} />
+            <ProgressCircle model={model} id="progressCircle" />
           </div>
           <div className="col-4 p-1 ">
-            <BackgroundProgress model={model}>
+            <BackgroundProgress model={model} id="backgroundProgress">
               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/100px-React-icon.svg.png" alt='' />
             </BackgroundProgress>
           </div>
@@ -90,13 +90,13 @@ const App = () => {
 
         <div className="row p-4 rounded-bottom border-bottom border-left border-right">
           <div className="col-4">
-            <Slider model={model} modelControl={modelControl} />
+            <Slider model={model} modelControl={modelControl} id="slider" />
           </div>
           <div className="col-4">
-            <CounterBadge model={model} modelControl={modelControl} />
+            <CounterBadge model={model} modelControl={modelControl} id="counterBadge" />
           </div>
           <div className="col-4">
-            <BoundedRangeForm model={model} modelControl={modelControl} />
+            <BoundedRangeForm model={model} modelControl={modelControl} id="boundedRangeForm" />
           </div>
         </div>
       </div>

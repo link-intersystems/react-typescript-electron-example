@@ -1,11 +1,11 @@
 import { BoundedRangeModel } from "./BoundedRange";
 
-export const ProgressCircle = ({ model }: { model: BoundedRangeModel }) => {
+export const ProgressCircle = ({ model, id }: { model: BoundedRangeModel, id?: string | undefined }) => {
     const percent = model.percent;
 
     return (
         <div
-            className={`progress-circle p${percent} ${percent > 50 ? "over50" : ""}`}
+            className={`progress-circle p${percent} ${percent > 50 ? "over50" : ""}`} id={id}
         >
             <span>{percent}%</span>
             <div className="left-half-clipper">

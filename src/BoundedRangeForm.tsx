@@ -71,7 +71,7 @@ export const BoundedRangeForm = (props: any) => {
     }, [value, min, max]);
 
     return (
-        <form className="rounded border p-4">
+        <form className="rounded border p-4" id={props.id}>
             <BoundedRangeFormItem
                 name="Min"
                 value={min}

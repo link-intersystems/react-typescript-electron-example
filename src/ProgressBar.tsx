@@ -1,6 +1,6 @@
 import { BoundedRangeModel } from "./BoundedRange";
 
-export const ProgressBar = ({ model }: { model: BoundedRangeModel }) => {
+export const ProgressBar = ({ model, id }: { model: BoundedRangeModel, id?: string | undefined }) => {
     const percent = model.percent;
 
     const progressBarStyle = {
@@ -8,7 +8,7 @@ export const ProgressBar = ({ model }: { model: BoundedRangeModel }) => {
     };
 
     return (
-        <div className="progress">
+        <div className="progress" id={id} >
             <div
                 className="progress-bar"
                 style={progressBarStyle}

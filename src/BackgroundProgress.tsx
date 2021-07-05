@@ -5,8 +5,9 @@ export const BackgroundProgress = ({
     model,
     valueColor = "#007bff",
     bgColor = "#e9ecef",
-    children
-}: { model: BoundedRangeModel, valueColor?: string, bgColor?: string, children?: any }) => {
+    children,
+    id
+}: { model: BoundedRangeModel, valueColor?: string, bgColor?: string, children?: any, id?: string | undefined }) => {
     const percent = model.percent;
 
     const style = {
@@ -22,5 +23,5 @@ export const BackgroundProgress = ({
             "%"
     };
 
-    return React.cloneElement(children, { style: style });
+    return React.cloneElement(children, { style: style, id });
 };

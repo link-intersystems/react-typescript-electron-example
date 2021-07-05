@@ -1,6 +1,6 @@
 import { BoundedRangeControl, BoundedRangeModel } from "./BoundedRange";
 
-export const Slider = ({ model, modelControl }: { model: BoundedRangeModel, modelControl: BoundedRangeControl }) => {
+export const Slider = ({ model, modelControl, id }: { model: BoundedRangeModel, modelControl: BoundedRangeControl, id?: string | undefined }) => {
     const onValueChanged = (event: any) => {
         let value = event.target.value;
         modelControl.setModel({
@@ -13,7 +13,7 @@ export const Slider = ({ model, modelControl }: { model: BoundedRangeModel, mode
         <input
             type="range"
             className="form-range"
-            id="customRange1"
+            id={id}
             onChange={onValueChanged}
             min={model.min}
             max={model.max}
