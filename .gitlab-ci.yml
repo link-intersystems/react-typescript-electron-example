@@ -21,19 +21,22 @@ stages:
 cache:
   paths:
     - node_modules/
+    - .yarn
 
 test:electron:
   stage: test
+  before_script: 
+    - yarn config set cache-folder .yarn
+    - yarn install --frozen-lockfile
   script:
-    - npm install
-    - npm install yarn
     - npm run test
 
 dist:electron:
   stage: dist
+  before_script: 
+    - yarn config set cache-folder .yarn
+    - yarn install --frozen-lockfile
   script:
-    - npm install
-    - npm install yarn
     - npm run electron:build
 #    - node ./specs/start.js ./specs/async.spec.js
 
